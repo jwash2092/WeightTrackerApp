@@ -7,8 +7,6 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import java.math.BigDecimal;
-
 @NoArgsConstructor
 @AllArgsConstructor
 @Data
@@ -16,11 +14,12 @@ public class PersonDTO {
 
     @NotEmpty(message = "Please enter firstName.")
     private String firstName;
-    @NotEmpty(message = "Please enter lastName.")
-    private String lastName;
 
     @JsonInclude
     private String middleName;
+
+    @NotEmpty(message = "Please enter lastName.")
+    private String lastName;
 
     @JsonInclude
     private String suffix;
@@ -34,5 +33,5 @@ public class PersonDTO {
     @Positive
     @PositiveOrZero
     @Min(value = 1, message = "Please enter weight greater than or equal to 0.")
-    private BigDecimal weight;
+    private Integer weight;
 }
