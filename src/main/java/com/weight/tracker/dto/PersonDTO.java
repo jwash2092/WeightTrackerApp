@@ -24,8 +24,6 @@ public class PersonDTO {
     @JsonInclude
     private String suffix;
 
-    @NotEmpty(message = "Please enter dateOfBirth.")
-    private String dateOfBirth;
     @Min(value = 1, message = "Please enter age greater than or equal to 0.")
     @PositiveOrZero
     @Digits(message = "Please enter a valid age up to 3 numbers.", integer = 2, fraction = 2)

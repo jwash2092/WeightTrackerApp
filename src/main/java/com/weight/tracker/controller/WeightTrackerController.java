@@ -14,10 +14,10 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/v1/weightTracker")
 public class WeightTrackerController {
 
-    @PostMapping(path = "/addIndividual", consumes = MediaType.APPLICATION_JSON_VALUE, produces = MediaType.APPLICATION_JSON_VALUE)
+    @PostMapping(path = "/addUser", consumes = MediaType.APPLICATION_JSON_VALUE, produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<String> addIndividual(@RequestBody @Valid PersonDTO personDTO) {
 
-        return new ResponseEntity<>(HttpStatus.OK);
+        return new ResponseEntity<>(personDTO.toString(), HttpStatus.OK);
     }
 
 }

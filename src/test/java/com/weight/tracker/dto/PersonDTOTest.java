@@ -10,7 +10,7 @@ public class PersonDTOTest {
 
     @BeforeEach
     public void setup() {
-        personDTO = new PersonDTO("Jermaine", "Ro", "Watts", "Jr", "09-20-1991", 31, 223);
+        personDTO = new PersonDTO("Jermaine", "Ro", "Watts", "Jr", 31, 223);
     }
 
     @Test
@@ -31,11 +31,6 @@ public class PersonDTOTest {
     @Test
     public void testSuffix() {
         Assertions.assertEquals("Jr", personDTO.getSuffix());
-    }
-
-    @Test
-    public void testDateOfBirth() {
-        Assertions.assertEquals("09-20-1991", personDTO.getDateOfBirth());
     }
 
 
